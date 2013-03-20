@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Yo dude">
+    <title>Test</title>
+    <style>
+    body, html {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        position: relative;
+        -webkit-text-size-adjust: 100%;
+        -webkit-user-select: none;
+    }
+
+    img {
+        display: block;
+    }
+
+    #wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    #proute {
+        height: 100%;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        -webkit-transition: -webkit-transform 2s ease;
+    }
+
+    .moveTop {
+        -webkit-transform: translateY(600px);
+    }
+    </style>
+</head>
+
+<body>
+    
+    <div id="wrapper">
+        <div id="proute">
+            <img src="chat.jpg" alt="Chat" width="320" height="240">
+            <img src="chat.jpg" alt="Chat" width="320" height="240">
+            <img src="chat.jpg" alt="Chat" width="320" height="240">
+            <img src="chat.jpg" alt="Chat" width="320" height="240">
+            <img src="chat.jpg" alt="Chat" width="320" height="240">
+            <img src="chat.jpg" alt="Chat" width="320" height="240">
+            <img src="chat.jpg" alt="Chat" width="320" height="240">
+            <img src="chat.jpg" alt="Chat" width="320" height="240">
+        </div><!-- end #proute -->
+    </div><!-- end #wrapper -->
+
+<script src="zepto.js"></script>
+<script>
+Zepto(function($) {
+    $('img').tap(function() {
+        $('div#proute').addClass('moveTop')
+    })
+})
+</script>
+</body>
+</html>
